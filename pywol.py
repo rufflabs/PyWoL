@@ -34,4 +34,4 @@ def build_packet(mac_string):
 wol_packet = build_packet(sys.argv[1])
 
 udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.sendto(wol_packet, (sys.argv[2], 9))
+udp_socket.sendto(wol_packet, (sys.argv[2], 9))
