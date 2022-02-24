@@ -7,8 +7,8 @@ udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 # Bind to any IP, port 9
 udp_socket.bind(('', 9))
 
-print 'PyWoL: Wake-On-LAN Listener\n=============================='
-print 'Listening for WoL packets on port 9.\n\n'
+print('PyWoL: Wake-On-LAN Listener\n==============================')
+print('Listening for WoL packets on port 9.\n\n')
 
 while True:
     data, _ = udp_socket.recvfrom(1024)
@@ -39,4 +39,4 @@ while True:
         
         if mac_address == second_mac:
             mac_address = payload[:6]
-            print 'WoL for MAC: ' + ":".join(mac_address)
+            print('WoL for MAC: ' + ":".join(mac_address))
